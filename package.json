@@ -8,9 +8,9 @@
     "install-client": "cd client && npm install",
     "server": "nodemon server",
     "client": "cd client && npm start",
-    "start-dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
+    "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
     "build-client": "cd client && npm run build",
-    "start-deploy": "node server"
+    "deploy": "node server"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
