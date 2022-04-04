@@ -24,7 +24,16 @@ const BookList = () => {
         title={firstBook.title}
         author={firstBook.author}
         img={firstBook.img}
-      />
+        children='letak sini children'
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+          perspiciatis, ab saepe unde nostrum debitis error placeat asperiores
+          quae iusto a quisquam sapiente culpa consectetur rerum enim facere
+          quas dicta. Quo consequuntur neque ipsam omnis id ratione delectus
+          placeat aliquam.
+        </p>
+      </Book>
       <Book
         title={secondBook.title}
         author={secondBook.author}
@@ -34,14 +43,15 @@ const BookList = () => {
   );
 };
 
-// props destructure right away
-const Book = ({ title, author, img }) => {
-  // const { title, author, img } = props;
+const Book = (props) => {
+  const { title, author, img } = props;
+  console.log(props);
   return (
     <article className='book'>
       <img src={img} alt='load fail' />
       <h1>{title}</h1>
       <h4>{author}</h4>
+      {props.children}
     </article>
   );
 };
