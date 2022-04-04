@@ -4,49 +4,46 @@ import ReactDOM from 'react-dom';
 // CSS
 import './index.css';
 
+// setup const
+const firstBook = {
+  title: "It's Not Easy Being a Bunny",
+  author: 'Marilyn Sadler',
+  img: 'https://images-na.ssl-images-amazon.com/images/I/81WZ6QvGZ2L._AC_UL604_SR604,400_.jpg',
+};
+
+const secondBook = {
+  title: 'Where the Crawdads Sing',
+  author: 'Delia Owens',
+  img: 'https://images-na.ssl-images-amazon.com/images/I/61m1Vxw8tiL._AC_UL604_SR604,400_.jpg',
+};
+
 const BookList = () => {
   return (
     <section className='booklist'>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book
+        title={firstBook.title}
+        author={firstBook.author}
+        img={firstBook.img}
+      />
+      <Book
+        title={secondBook.title}
+        author={secondBook.author}
+        img={secondBook.img}
+      />
     </section>
   );
-}
+};
 
-const Book = () => {
+// props destructure right away
+const Book = ({ title, author, img }) => {
+  // const { title, author, img } = props;
   return (
     <article className='book'>
-      <Image />
-      <Title />
-      <Author />
+      <img src={img} alt='load fail' />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
     </article>
   );
-}
-
-const Image = () => {
-  return (
-    <img src="https://images-na.ssl-images-amazon.com/images/I/81WZ6QvGZ2L._AC_UL604_SR604,400_.jpg" alt="image load fail" />
-  );
-}
-
-const Title = () => {
-  return (
-    <h1>It's Not Easy Being a Bunny</h1>
-  );
-}
-
-const Author = () => {
-  return (
-    <h4 style={{ color: '#617d98' }}>Marilyn Sadler</h4>
-  );
-}
+};
 
 ReactDOM.render(<BookList />, document.getElementById('root'));
