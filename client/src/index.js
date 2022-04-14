@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 // CSS
 import './index.css';
@@ -22,4 +22,9 @@ const BookList = () => {
   );
 };
 
-ReactDOM.render(<BookList />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BookList />
+  </React.StrictMode>
+);
