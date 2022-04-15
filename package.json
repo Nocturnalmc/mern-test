@@ -10,7 +10,7 @@
     "client": "cd client && npm start",
     "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
     "build-client": "cd client && npm run build",
-    "deploy": "node server"
+    "deploy": "nodemon server"
   },
   "author": "",
   "license": "GPL-3.0-or-later",
