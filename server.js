@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 
-app.use(express.static('./client/build'));
+app.use(express.static('./17-6-2022/build'));
 
 app.get('/generate', (req, res) => {
   res.status(200).json({ generate: 'Successfull' });
@@ -15,7 +16,7 @@ app.all('*', (req, res) => {
   res.status(404).send('Not found');
 });
 
-const port = 5000;
+const port = process.env.PORT;
 
 const start = () => {
   app.listen(port, console.log(`Server is listening at port: ${port}`));
