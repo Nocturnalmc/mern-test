@@ -16,7 +16,7 @@ app.all('*', (req, res) => {
   res.status(404).send('Not found');
 });
 
-const port = process.env.PORT;
+const port = process.env.PORT || 7500;
 
 const start = () => {
   app.listen(port, console.log(`Server is listening at port: ${port}`));
