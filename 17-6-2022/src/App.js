@@ -17,7 +17,7 @@ function App() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Learn React Yan Penatlah
+          Learn React Yan Penatlah edit for linting
         </a>
       </header>
     </div>
