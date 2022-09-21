@@ -17,7 +17,7 @@ function App() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Learn React Yan ada changes sikit
+          Learn React Yan changes @ testing 1
         </a>
       </header>
     </div>
